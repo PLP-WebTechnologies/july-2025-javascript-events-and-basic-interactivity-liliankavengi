@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Page Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>🚀 Interactive Web Assignment</h1>
+                <button id="themeToggle" class="theme-toggle">
+                    <span id="themeIcon">🌙</span>
+                    <span id="themeText">Dark Mode</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Part 2: Interactive Counter Game -->
+        <section class="counter-section">
+            <h2>🎮 Interactive Counter Game</h2>
+            <p>Test your clicking skills! Try different actions below:</p>
+            <div class="counter-display" id="counterDisplay">0</div>
+            <div class="counter-buttons">
+                <button class="btn btn-primary" id="incrementBtn">➕ Add 1</button>
+                <button class="btn btn-primary" id="decrementBtn">➖ Subtract 1</button>
+                <button class="btn btn-success" id="multiplyBtn">✖️ Double It</button>
+                <button class="btn btn-danger" id="resetBtn">🔄 Reset</button>
+            </div>
+            <p id="counterMessage" style="margin-top: 15px; font-weight: 600;"></p>
+        </section>
+
+        <!-- Interactive FAQ Section -->
+        <section class="faq-section">
+            <h2 class="mb-20">❓ Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question" data-faq="0">
+                    <span>What is JavaScript event handling?</span>
+                    <span class="faq-arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Event handling in JavaScript allows you to respond to user interactions like clicks, keyboard input, mouse movements, and more. It's what makes web pages interactive and dynamic!</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" data-faq="1">
+                    <span>How does form validation work?</span>
+                    <span class="faq-arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Form validation checks user input to ensure it meets specific requirements before submission. This improves user experience and prevents invalid data from being processed.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" data-faq="2">
+                    <span>Why is DOM manipulation important?</span>
+                    <span class="faq-arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>DOM manipulation allows you to dynamically change webpage content, style, and structure without reloading the page. This creates smooth, app-like user experiences.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabbed Interface -->
+        <section class="tabs-section">
+            <h2 class="mb-20">📋 Interactive Tabs</h2>
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="overview">Overview</button>
+                <button class="tab-btn" data-tab="features">Features</button>
+                <button class="tab-btn" data-tab="code">Code Tips</button>
+            </div>
+            <div class="tab-content">
+                <div id="overview" class="tab-pane active">
+                    <h3>Project Overview</h3>
+                    <p>This interactive web page demonstrates modern JavaScript techniques including event handling, DOM manipulation, and form validation. Each component is built with accessibility and user experience in mind.</p>
+                    <p>The page features a responsive design that adapts to different screen sizes and includes a dark/light theme toggle for user preference.</p>
+                </div>
+                <div id="features" class="tab-pane">
+                    <h3>Interactive Features</h3>
+                    <ul style="list-style-type: disc; padding-left: 20px; margin-top: 15px;">
+                        <li>🌓 Theme toggle with smooth transitions</li>
+                        <li>🎯 Interactive counter with multiple actions</li>
+                        <li>📖 Collapsible FAQ section</li>
+                        <li>📑 Tabbed content interface</li>
+                        <li>✅ Real-time form validation</li>
+                        <li>📱 Fully responsive design</li>
+                    </ul>
+                </div>
+                <div id="code" class="tab-pane">
+                    <h3>Development Tips</h3>
+                    <p><strong>Event Listeners:</strong> Use addEventListener() for better control and the ability to add multiple listeners to the same element.</p>
+                    <p><strong>Form Validation:</strong> Validate on both 'input' and 'blur' events for the best user experience.</p>
+                    <p><strong>CSS Transitions:</strong> Add smooth animations to make interactions feel polished and professional.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 3: Form Validation -->
+        <section class="form-section">
+            <h2 class="mb-20">📝 Interactive Form with Validation</h2>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <form id="interactiveForm" novalidate>
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                    <div class="error-message" id="fullNameError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="error-message" id="emailError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                    <div class="error-message" id="phoneError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" required>
+                    <div class="error-message" id="passwordError"></div>
+                    <small style="color: var(--text-secondary); font-size: 14px;">
+                        Password must be at least 8 characters with uppercase, lowercase, and number
+                    </small>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password *</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    <div class="error-message" id="confirmPasswordError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age *</label>
+                    <select id="age" name="age" required>
+                        <option value="">Select your age range</option>
+                        <option value="13-17">13-17</option>
+                        <option value="18-24">18-24</option>
+                        <option value="25-34">25-34</option>
+                        <option value="35-44">35-44</option>
+                        <option value="45-54">45-54</option>
+                        <option value="55+">55+</option>
+                    </select>
+                    <div class="error-message" id="ageError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tell us about yourself (optional)"></textarea>
+                    <div class="error-message" id="messageError"></div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="submitBtn" style="width: 100%; font-size: 18px; padding: 15px;">
+                    <span id="submitText">Submit Form</span>
+                    <span id="submitLoading" class="loading hidden"></span>
+                </button>
+
+                <div class="success-message" id="successMessage">
+                    🎉 Form submitted successfully! Thank you for your submission.
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
